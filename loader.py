@@ -2,11 +2,11 @@ import pandas as pd
 from pathlib import Path
 import docx
 from pypdf import PdfReader
-
+import re 
 ## Часть 1
 
-def load_csv(path: Path, sep: str = ";") -> pd.DataFrame:
-    df = pd.read_csv(path, sep=sep)
+def load_csv(path: Path, sep: str = ",") -> pd.DataFrame:
+    df = pd.read_csv(path, usecols=["text"])["text"]
     return df
 
 def load_txt(path: Path, sep: str = "SEP") -> pd.DataFrame:
