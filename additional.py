@@ -1,4 +1,4 @@
-additional_stopwords = ["а",
+additional_stopwords = {"а",
 "без",
 "безо",
 "в",
@@ -108,4 +108,4 @@ additional_stopwords = ["а",
 "какой",
 "каков",
 "который",
-"чей"]
+"чей"}

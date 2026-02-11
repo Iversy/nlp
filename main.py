@@ -1,7 +1,7 @@
 from pathlib import Path
 from loader import load 
 from cleaner import clean
-from broing import get_tokens
+from broing import _tokenise
 import argparse
 import nltk
 
@@ -19,13 +19,13 @@ def main():
 
     nltk.download('punkt')
     nltk.download('punkt_tab')
-    nltk.download('stopwords')
+    # nltk.download('stopwords')
 
     serega = load(path)
     print(serega)
     sergei = clean(serega)
     print(sergei)
-    sergei_sergeevich = get_tokens(sergei)
+    sergei_sergeevich = _tokenise(sergei)
     print(sergei_sergeevich)
 
 if __name__ == "__main__":
